@@ -40,7 +40,7 @@ function createCard(car) {
     <div class="col-md-4">
       <div class="card h-100 shadow-sm card-hover" role="button" data-bs-toggle="modal"
       data-bs-target="#${car.car_id}">
-        <img src="../../AdminDashboard/Images/${car.url_img}" class="card-img-top" alt="${car.brand}" 
+        <img src="../AdminDashboard/Images/${car.url_img}" class="card-img-top" alt="${car.brand}" 
         style="height: 300px; object-fit: cover;">
         <div class="card-body d-flex flex-column justify-content-between"><div>
         <h5 class="card-title">${car.brand} ${car.model} ${car.type} ${car.booked
