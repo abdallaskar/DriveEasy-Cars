@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Car Rental - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./home/Css/style.css">
+</head>
+
+<body>
+    <!-- main navigation in all of the system -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#" style="font-size: 1.8rem;">
+                <i class="fas fa-car me-2"></i>DriveEasy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto" style="font-size: 1.1rem;">
+                    <li class="nav-item px-3 text-center">
+                        <a class="nav-link active" href="./index.html" style="font-weight: 500;">Home</a>
+                    </li>
+                    <li class="nav-item px-3 text-center">
+                        <a class="nav-link" href="./CarListings/carlist.html" style="font-weight: 500;">Car List</a>
+                    </li>
+                    <li class="nav-item px-3 text-center">
+                        <a class="nav-link" href="./ContactUs/html/aboutUs.html" style="font-weight: 500;">About Us</a>
+                    </li>
+                    <li class="nav-item px-3 text-center">
+                        <a class="nav-link" href="./ContactUs/html/contactUs.html" style="font-weight: 500;">Contact
+                            Us</a>
+                    </li>
+                    <li class="nav-item px-3 text-center">
+                        <button id="authButton" class="btn btn-light px-4 me-2"
+                            style="font-weight: 500; font-size: 1.1rem;" data-bs-toggle="modal"
+                            data-bs-target="#authModal">
+                            Login/Register
+                        </button>
+                    </li>
+                    <li class="nav-item px-3 text-center">
+                        <button id="dashboardButton" class="btn btn-outline-light px-4 d-none"
+                            style="font-weight: 500; font-size: 1.1rem;"
+                            onclick="window.location.href='./AdminDashboard/admin.html'">
+                            Dashboard
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full-page Slider -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./home/Images/1.jpg" class="d-block w-100" alt="Premium fleet">
+                <div class="carousel-caption d-md-block">
+                    <h2 class="display-5 fw-bold mb-3">Premium Fleet at Your Service</h2>
+                    <p class="lead d-none d-md-block">
+                        Choose from our collection of late-model vehicles, from luxury sedans to spacious SUVs
+                    </p>
+                    <a href="./CarListings/carlist.html" class="btn btn-primary btn-lg mt-3 px-4 py-2">
+                        Show All Cars <i class=" fas fa-chevron-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./home/Images/2.jpg" class="d-block w-100" alt="Best rates">
+                <div class="carousel-caption d-md-block">
+                    <h2 class="display-5 fw-bold mb-3">Unbeatable Rates & Flexible Terms</h2>
+                    <p class="lead d-none d-md-block">Enjoy competitive daily, weekly, and monthly rates with no hidden
+                        fees</p>
+                    <a href="./CarListings/carlist.html" class="btn btn-primary btn-lg mt-3 px-4 py-2">Show All Cars <i
+                            class=" fas fa-chevron-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./home/Images/3.jpg" class="d-block w-100" alt="Easy rental">
+                <div class="carousel-caption d-md-block">
+                    <h2 class="display-5 fw-bold mb-3">Seamless Rental Experience</h2>
+                    <p class="lead d-none d-md-block">Our quick online booking and 24/7 customer support</p>
+                    <a href="./CarListings/carlist.html" class="btn btn-primary btn-lg mt-3 px-4 py-2">
+                        Show All Cars <i class=" fas fa-chevron-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+    </div>
+
+    <!-- Footer (will appear after scrolling) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>© 2025 DriveEasy Car Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login/Register Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title " id="authModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center ">
+                    <div id="loginForm" class="auth-form w-75">
+                        <form id="loginFormSubmit">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="loginEmail" placeholder="✉️ Email" />
+                                <p id="emailErrorMsg" class="d-none text-danger">You have to enter a vaild email</p>
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="password" class="form-control " id="loginPassword"
+                                    placeholder="🔒password" />
+                                <p id="passwordErrorMsg" class="d-none text-danger">Invalid password</p>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Login
+                            </button>
+                        </form>
+                        <p class="mt-3 text-center ">Don't have account? <a href="#" class="cursor-pointer"
+                                id="showRegister">Register</a>
+                        </p>
+                    </div>
+
+                    <div id="registerForm" class="auth-form d-none w-75">
+                        <form id="registerFormSubmit">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="registerName"
+                                    placeholder="🧑🏼Enter your name" />
+                                <p id="nameErrorMsg" class="d-none text-danger">You have to enter your name</p>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="registerEmail"
+                                    placeholder="✉️Enter your email" />
+                                <p id="registerEmailErrorMsg" class="d-none text-danger">You have to enter a vaild email
+                                </p>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" id="registerPassword"
+                                    placeholder="🔒Enter password" />
+                                <p id="registerPasswordErrorMsg" class="d-none text-danger">You have to enter a vaild
+                                    password </p>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Register
+                            </button>
+                        </form>
+                        <p class="mt-3 text-center ">already have account? <a href="#" class=" cursor-pointer"
+                                id="showLogin">login</a>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Authentication/js/view.js" type="module"></script>
+</body>
+
+</html>

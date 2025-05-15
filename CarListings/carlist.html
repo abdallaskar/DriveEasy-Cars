@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car list</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+  <!-- main nave bar for home -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="
+    background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#" style="font-size: 1.8rem;">
+        <i class="fas fa-car me-2"></i>DriveEasy
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto" style="font-size: 1.1rem;">
+          <li class="nav-item px-3 text-center">
+            <a class="nav-link " href="../index.html" style="font-weight: 500;">Home</a>
+          </li>
+          <li class="nav-item px-3 text-center">
+            <a class="nav-link active" href="./carlist.html" style="font-weight: 500;">Car List</a>
+          </li>
+          <li class="nav-item px-3 text-center">
+            <a class="nav-link" href="../ContactUs/html/aboutUs.html" style="font-weight: 500;">About Us</a>
+          </li>
+          <li class="nav-item px-3 text-center">
+            <a class="nav-link" href="../ContactUs/html/contactUs.html" style="font-weight: 500;">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Second Navbar (Compatible with existing JS) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top py-2" style="top: 65px;">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarContent">
+        <!-- Search Form (maintains original class names) -->
+        <form class="d-flex mx-3 form" role="search" style="flex: 1; max-width: 400px;">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+              <i class="fas fa-search text-muted"></i>
+            </span>
+            <input class="form-control border-start-0 ps-0 search-input" type="search"
+              placeholder="Search by car brand name" aria-label="Search">
+            <button class="btn btn-light search_btn" type="submit">
+              Search
+            </button>
+          </div>
+        </form>
+
+        <!-- Filter Dropdowns (maintain original IDs and values) -->
+        <div class="d-flex flex-wrap align-items-center gap-2">
+          <!-- Sort Dropdown (as select) -->
+          <div class="dropdown mx-2">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="fas fa-sort-amount-down-alt text-muted"></i>
+              </span>
+              <select class="form-select border-start-0 ps-0" id="sortSelect" aria-label="Sort by" aria-label="Sort by"
+                style="cursor: pointer;">
+                <option value="1">&nbsp;&nbsp; Price: Low to High</option>
+                <option value="2">&nbsp;&nbsp; Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Type Dropdown (as select) -->
+          <div class="dropdown mx-2" style="width: 200px">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="fas fa-car text-muted"></i>
+              </span>
+              <select class="form-select border-start-0 ps-0" id="typeSelect" aria-label="Car type">
+                <option value="1"> &nbsp;&nbsp;All types</option>
+                <option value="2"> &nbsp;&nbsp;Sedan</option>
+                <option value="3"> &nbsp;&nbsp;SUV</option>
+                <option value="4"> &nbsp;&nbsp;Coupe</option>
+                <option value="5"> &nbsp;&nbsp;Hatchback</option>
+                <option value="6"> &nbsp;&nbsp;Convertible</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Availability Dropdown (as select) -->
+          <div class="dropdown mx-2">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="fas fa-calendar-check text-muted"></i>
+              </span>
+              <select class="form-select border-start-0 ps-0" id="Availability_dropdown" aria-label="Availability">
+                <option value="1"> &nbsp;&nbsp;All Cars</option>
+                <option value="2"> &nbsp;&nbsp;Available Cars</option>
+                <option value="3"> &nbsp;&nbsp;Not Available Cars</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cards Section  -->
+  <div id="mainCarContainer" class="container my-4">
+    <div id="cardContainer" class="row g-4"></div>
+
+  </div>
+  <!-- Footer -->
+
+  <footer class="text-center text-white py-4">
+    <div class="container">
+      <div class="mb-4">
+        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="mb-0">© 2025 Sakr Car Rental. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/view.js" type="module"></script>
+</body>
+
+</html>
